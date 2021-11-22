@@ -21,7 +21,7 @@ jobs:
           command: bundle -v
       - ruby/bundle-install
       - run: gem install rspec
-      - run: bundle update
+      - run: bundle update --bundler
 
 
 # Invoke jobs via workflows
