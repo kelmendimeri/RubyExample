@@ -20,6 +20,8 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+      - run: gem install bundler:2.2.29
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
