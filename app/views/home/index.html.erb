@@ -1,0 +1,25 @@
+
+<div class="jumbotron jumbotron-fluid" style="height:300px; background-image: url('https://image.freepik.com/free-photo/donate-sign-charity-campaign_53876-127165.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="container">
+    <h1 class="display-4">Campaign AG</h1>
+    <p class="lead">Our focus in rising funding campaigning.</p>
+  </div>
+</div>
+
+
+
+
+<div class="row row-cols-1 row-cols-md-3">
+  <% @articles.each do |campaign| %>
+    <div class="col-md-4" align="center">
+      <div class="card h-100" style="background-color: lightblue; border-radius: 10px; padding: 10px">
+        <img src="" width="200px" height="150px" alt="hello" />
+        <div class="card-body">
+          <h5 class="card-title"> <%= campaign.title %> </h5>
+          <p class="card-text">Size: <%= campaign.description %></p>
+        </div>
+        <%= link_to 'More', article_path(campaign), class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>
